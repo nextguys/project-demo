@@ -1,0 +1,35 @@
+{
+  "name": "nextguys--project-demo",
+  "author": {
+    "name": "linusha"
+  },
+  "description": "",
+  "scripts": {
+    "build": "rm -rf build/* && export MINIFY='' && ./tools/build.sh",
+    "build-minified": "rm -rf build/* && export MINIFY=true && ./tools/build.sh"
+  },
+  "dependencies": {
+    "@rollup/plugin-json": "4.1.0",
+    "rollup": "^2.70.2",
+    "rollup-plugin-export-default": "1.4.0",
+    "rollup-plugin-polyfill-node": "0.9.0"
+  },
+  "lively": {
+    "projectDependencies": [],
+    "boundLivelyVersion": "5d5f3cc3de08d65743390de284a18817864390a5",
+    "repositoryIsPrivate": false,
+    "repoBelongsToOrg": true,
+    "testActionEnabled": true,
+    "buildActionEnabled": false,
+    "testOnPush": true,
+    "buildOnPush": false,
+    "deployOnPush": false,
+    "canUsePages": false,
+    "deployActionEnabled": false
+  },
+  "version": "0.1.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nextguys/project-demo"
+  }
+}
