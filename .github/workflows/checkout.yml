@@ -19,6 +19,6 @@ jobs:
       - name: Checkout private tools
         uses: actions/checkout@v4
         with:
-          repository: my-org/my-private-tools
+          repository: nextguys/private-dependency-project
           token: ${{ secrets.TESTSECRET }}
           path: local_projects/nextguys--private-dependency-project/
