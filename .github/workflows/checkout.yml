@@ -16,9 +16,10 @@ jobs:
         uses: actions/checkout@v4
         with:
           path: local_projects/nextguys--project-demo/
+      - run: |
+          ssh-add - <<< '${{ secrets.PRIVATEKEY }}'
       - name: Checkout private tools
         uses: actions/checkout@v4
         with:
           repository: nextguys/private-dependency-project
-          token: ${{ secrets.TESTSECRET }}
           path: local_projects/nextguys--private-dependency-project/
