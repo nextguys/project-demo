@@ -1,0 +1,24 @@
+name: Test Cloning of private Repos
+
+on:
+  workflow_dispatch:
+
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout `lively.next`
+        uses: actions/checkout@v4
+        with:
+          repository: LivelyKernel/lively.next
+      - name: Checkout Project Repository
+        uses: actions/checkout@v4
+        with:
+          path: local_projects/nextguys--project-demo/
+      - name: Checkout private tools
+        uses: actions/checkout@v4
+        with:
+          repository: my-org/my-private-tools
+          token: ${{ secrets.TESTSECRET }}
+          path: local_projects/nextguys--private-dependency-project/
