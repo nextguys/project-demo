@@ -17,6 +17,7 @@ jobs:
         with:
           path: local_projects/nextguys--project-demo/
       - run: |
+          eval `ssh-agent -s`
           ssh-add - <<< '${{ secrets.PRIVATEKEY }}'
       - name: Checkout private tools
         uses: actions/checkout@v4
