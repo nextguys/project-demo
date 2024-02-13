@@ -15,8 +15,13 @@
     "rollup-plugin-polyfill-node": "0.9.0"
   },
   "lively": {
-    "projectDependencies": [],
-    "boundLivelyVersion": "5d5f3cc3de08d65743390de284a18817864390a5",
+    "projectDependencies": [
+      {
+        "name": "nextguys--private-dependency-project",
+        "version": "0.1.1"
+      }
+    ],
+    "boundLivelyVersion": "8f09a1b5434b1f021169da7fc9e8aaaf508498c4",
     "repositoryIsPrivate": false,
     "repoBelongsToOrg": true,
     "testActionEnabled": true,
@@ -27,7 +32,7 @@
     "canUsePages": false,
     "deployActionEnabled": false
   },
-  "version": "0.1.1",
+  "version": "0.1.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/nextguys/project-demo"
