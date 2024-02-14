@@ -21,7 +21,7 @@
         "version": "0.1.1"
       }
     ],
-    "boundLivelyVersion": "8f09a1b5434b1f021169da7fc9e8aaaf508498c4",
+    "boundLivelyVersion": "d4c0ac1156d5942d7c2bbaf7829f18a138b2ce6a",
     "repositoryIsPrivate": false,
     "repoBelongsToOrg": true,
     "testActionEnabled": true,
@@ -32,7 +32,7 @@
     "canUsePages": false,
     "deployActionEnabled": false
   },
-  "version": "0.1.2",
+  "version": "0.1.3",
   "repository": {
     "type": "git",
     "url": "https://github.com/nextguys/project-demo"
