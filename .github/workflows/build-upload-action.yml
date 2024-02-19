@@ -52,14 +52,13 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: nextguys/private-dependency-project
-          path: local_projects/[object Object]/
+          path: local_projects/nextguys--private-dependency-project/
           ssh-key: ${{ secrets.nextguys_private_dependency_project }}
       - name: Checkout Project Dependencies
         uses: actions/checkout@v4
         with:
           repository: nextguys/private-transitive-dependency-project
-          path: local_projects/[object Object]/
-          ssh-key: ${{ secrets.nextguys_private_transitive_dependency_project }}
+          path: local_projects/nextguys--private-transitive-dependency-project/
       - name: Build Project
         run: npm run build-minified --prefix local_projects/nextguys--project-demo
       - name: Upload Build Artifacts
