@@ -56,7 +56,7 @@ jobs:
         with:
           repository: nextguys/private-dependency-project
           path: local_projects/nextguys--private-dependency-project/
-          ssh-key: ${{ secrets.nextguys_private_dependency_project }}
+          ssh-key: ${{ secrets.nextguys__private_dependency_project }}
       - name: Checkout Project Dependencies
         uses: actions/checkout@v4
         with:

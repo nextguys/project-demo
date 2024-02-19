@@ -32,7 +32,7 @@
     "canUsePages": false,
     "deployActionEnabled": false
   },
-  "version": "0.1.7",
+  "version": "0.1.8",
   "repository": {
     "type": "git",
     "url": "https://github.com/nextguys/project-demo"
