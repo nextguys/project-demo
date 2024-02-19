@@ -20,7 +20,7 @@ jobs:
         uses: actions/cache/restore@v3
         env:
           cache-name: lively-repo
-          ref: d4c0ac1156d5942d7c2bbaf7829f18a138b2ce6a
+          ref: 91b1c2d9745ce849fc4da1a3c0771cc2b395012a
         with:
           path: .            
           key: ${{ runner.os }}-${{ env.cache-name }}-${{ env.ref }}
@@ -29,7 +29,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: LivelyKernel/lively.next
-          ref: d4c0ac1156d5942d7c2bbaf7829f18a138b2ce6a
+          ref: 91b1c2d9745ce849fc4da1a3c0771cc2b395012a
       - name: Install `lively.next`
         if: ${{ steps.cache-lively.outputs.cache-hit != 'true' }}
         run: |
@@ -40,7 +40,7 @@ jobs:
         uses: actions/cache/save@v3
         env:
           cache-name: lively-repo
-          ref: d4c0ac1156d5942d7c2bbaf7829f18a138b2ce6a
+          ref: 91b1c2d9745ce849fc4da1a3c0771cc2b395012a
         with:
           path: .            
           key: ${{ runner.os }}-${{ env.cache-name }}-${{ env.ref }}     
@@ -52,14 +52,8 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: nextguys/private-dependency-project
-          path: local_projects/nextguys--private-dependency-project/
+          path: local_projects/[object Object]/
           ssh-key: ${{ secrets.nextguys_private_dependency_project }}
-      - name: Checkout Project Dependencies
-        uses: actions/checkout@v4
-        with:
-          repository: nextguys/private-transitive-dependency-project
-          path: local_projects/nextguys--private-transitive-dependency-project/
-          ssh-key: ${{ secrets.nextguys_private_transitive_dependency_project }}
       - name: Build Project
         run: npm run build-minified --prefix local_projects/nextguys--project-demo
       - name: Upload Build Artifacts
